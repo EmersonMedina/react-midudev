@@ -1,0 +1,16 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 2rem;
+}
+
+section img { 
+    max-width: 300px;
+}

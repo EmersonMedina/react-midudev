@@ -2,14 +2,22 @@ import { useReducer } from "react"
 import { type State, type Action, Language, FromLanguage } from "../types.d"
 import { AUTO_LANGUAGE } from "../constants"
 
+interface MyState {
+  fromLanguage: FromLanguage;
+  toLanguage: Language;
+  fromText: string;
+  result: string;
+  loading: boolean;
+}
+
 //1 Create a initialState
-const initialState = {
+const initialState: MyState = {
     fromLanguage: 'auto',
     toLanguage: 'en',
     fromText: '',
     result: '', 
     loading: false,
-  }
+  } 
   
   //2 Create a reducer
   function reducer(state: State, action: Action) {

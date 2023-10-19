@@ -16,7 +16,7 @@ const getPlaceholder = ({type, loading}: { type: SectionType, loading?: boolean}
 export const TextArea = ({ loading, value, type, onChange}: Props) => {
     const styles = type === SectionType.From 
         ?  commonStyles
-        : { ...commonStyles  }
+        : { ...commonStyles }
 
     const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         onChange(event.target.value)
@@ -28,7 +28,7 @@ export const TextArea = ({ loading, value, type, onChange}: Props) => {
             as='textarea'
             disabled={ type === SectionType.To }
             placeholder={getPlaceholder({ type, loading })}
-            style={styles}
+            style={styles as React.CSSProperties}
             value={value}
             onChange={handleChange}
         />

@@ -53,7 +53,7 @@ function App() {
       <ToastContainer />
       <h2 className="text-center">Google Translate Clone</h2>
       <Row data-bs-theme="dark"> 
-        <Col> 
+        <Col xs={12} md={5}> 
           <Stack gap={2}>
             <LanguageSelector 
               type={SectionType.From}
@@ -68,12 +68,12 @@ function App() {
             />
           </Stack>          
         </Col>
-        <Col xs="auto"> 
+        <Col xs={12} md={2} className="text-center"> 
           <Button variant="link" disabled={fromLanguage === AUTO_LANGUAGE} onClick={interchangeLanguages}>
             <ArrowsIcon/>
           </Button>
         </Col>
-        <Col> 
+        <Col xs={12} md={5}> 
           <Stack gap={2}>
             <LanguageSelector 
               type={SectionType.To} 
